@@ -1,0 +1,17 @@
+High availability of Namenode:
+        >The main reason for the failure of hadoop 1.x is the single namenode.
+        >since there is only single name node failure of this node or for planned maintenance,it leads to the shutdown of this name node
+        >so to avoid this,hadoop 2.x has been designed with two namenodes namely 
+             *active namenode
+             *passive namenode
+        >Active namenode:This performs all the work given by the client and if it edits something ,then it will be updated in the edit log
+        >so the edit log has up to date information on the data
+        >the passive namenode gets information from the edit logs,to update itself
+        >so that it can takeover when there is a failure of active name node
+        >these nodes shares a common directory that contains the location and edit logs,so that both the nodes can access it
+        >so this leads to the high availability of name node and we can use it even when the active node fails
+        >since the standby node has all the updates failure of active node does not result in data loss
+        >and both requires equal amount of hardware
+        >the data nodes send its heart beats to both name nodes,that they are active.
+        >the failover can be manual and automatic
+        >the automatic failover brings the new concept zookeper.
