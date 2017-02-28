@@ -1,0 +1,10 @@
+HDFS Federation:
+       >presence of multiple namenodes  increases the horizontal scaling such that at a time atleast one namenode can be accessed
+       even if there is a failure in other name node.
+       >the namenode has two parts :namespace,block pool
+       >namespace:it contains te metadata and blockpool contain the block management.
+       >namespace and block pool combines to form a namespace volume
+       >these namespace volumes are also distinct.
+       >the namenodes and block pool are independent
+       >but data nodes are dependent such that each datanode has data from various namenode
+       >the increase in number of namenode improves the scalability,performance and isolation of namenodes.
