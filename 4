@@ -1,0 +1,12 @@
+Configuration files that are to be edited for sure while installing a hadoop cluster:
+   >Core-site.xml
+   >HDFS-site.xml
+   >YARN-site.xml
+   >xml
+   Hadoop comes up with default configurations in *-default.xml. For example: hdfs-default.xml, yarn-default.xml, etc.
+   • Default configurations are overridden in *-site.xml. For example: hdfs-site.xml, yarn-site.xml, etc
+  configurations to be checked:
+   • dfs.replication.max   • dfs.heartbeat.interval • dfs.namenode.checkpoint.check.period
+   • dfs.hosts • dfs.hosts.exclude  • dfs.namenode.checkpoint.edits.dir
+  • dfs.namenode.checkpoint.txns   • dfs.bytes-per-checksum• dfs.namenode.replication.min
+   • dfs.namenode.checkpoint.max-retries • dfs.blocksize• dfs.namenode.checkpoint.dir • dfs.namenode.checkpoint.period 
