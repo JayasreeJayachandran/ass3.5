@@ -1,0 +1,10 @@
+check pointing:
+        >namenode consist of two files: fsimage, editlogs
+        >editlogs:it gets every operation done on hdfs.so it gets complete information about the changes in hdfs
+        >fsimage:this gives the file system representation in a periodic manner
+        >chech pointing is that the secondary namenode combines the edit log and fsimage and update it in fsimage
+        >so that every operations on hdfs is monitored.
+        >this is done periodically for every hour or it can be configured to a certain time
+        >thus the updated fsimage has entire information about the operation on file system
+        >this is done by secondary namenode 
+       
